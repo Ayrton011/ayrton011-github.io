@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2doExamen</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <nav>
+       
+            <img src="Logo.png" alt="250px" class="logo">
+        </a>
+        <ul>
+            <li><a class="active" href="#">Inicio</a></li>
+            <li><a href="#">Nosotros</a></li>
+            <li><a href="#">Sobre Nosotros</a></li>
+            <li><a href="#">Contactos</a></li>
+            <li><a href="#">Testimonios</a></li>
+        </ul>
+    </nav>
+
+    <div class="slider-frame">
+        <ul>
+            <li><img src="slider1.jpg" alt=""></li>
+            <li><img src="slider2.jpg" alt=""></li>
+            <li><img src="slider3.jpg" alt=""></li>
+            <li><img src="slider4.jpg" alt=""></li>
+        </ul>
+    </div>
+	<footer>
+<marquee behavior="" direction="">"El logro más impresionante de la industria del software es su continua anulación de los constantes y asombrosos logros de la industria del hardware"</marquee>
+	</footer>
+        <div id="login">
+            <form id="loginform">
+                <label for="usuario">Nombre:</label>
+                <input name="nombre" id="nombre" type="text" placeholder="Escribe tu nombre" required>
+                <label id="res"></label>
+                <button type="submit" title="Ingresar"  onclick="validar()">Iniciar Sesion</button>
+            </form>
+            
+        </div>
+    <article>	
+        <h3>Conversor de Bolivianos a Dolares:</h3><br>
+        <label>Bolivianos</label>
+    <input type="text" id="pesos"> 
+    <br>
+    <button type="button"  class="btn" onClick="cambio()">
+    Convertir a Dolares
+    </button>
+    <br>
+    <label>Dolares</label>
+    <p type="text" id="resul" >
+    </p>	
+    </article>	
+    <aside id="derecha">
+        <h3>Conversor de Dolares a Bolivianos:</h3><br>
+        <label>Dolares</label>
+    <input type="text" id="pesos2"> 
+    <br>
+    <button type="button"  class="btn" onClick="cambio2()">
+    Convertir a Bolivianos
+    </button>
+    <br>
+    <label>Bolivinos</label>
+    <p type="text" id="resul2" >
+    </p> 
+    </aside>
+ 
+<abajo>
+
+</abajo>
+
+<script type="text/javascript">
+        function validar()
+        {
+      
+           var nombre = document.getElementById('nombre').value;
+           alert('Bienvenido: '+nombre);
+        }
+
+function cambio(){
+var dol = 6.96; 
+var re ;   
+var pe =parseInt(document.getElementById('pesos').value, 10);
+ 
+re = pe / dol ;
+document.getElementById('resul').innerHTML= re;
+
+}
+function cambio2(){
+
+var dol = 6.96; 
+var re ;   
+var pe =parseInt(document.getElementById('pesos2').value, 10);
+ 
+re2 = pe * dol ;
+document.getElementById('resul2').innerHTML= re2;
+
+}
+    </script>
+</body>
+
+</html>
